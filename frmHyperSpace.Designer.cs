@@ -63,18 +63,20 @@ namespace HyperspaceSystem_Chewbacca_s_Coders
             this.lblRouteName = new System.Windows.Forms.Label();
             this.lblOriginPlanetData = new System.Windows.Forms.Label();
             this.lblOriginPlanet = new System.Windows.Forms.Label();
+            this.pnlLeft = new System.Windows.Forms.Panel();
             this.pnlDestination.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDestination)).BeginInit();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlanet1)).BeginInit();
             this.pnlOrigin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgOriginPlanet)).BeginInit();
+            this.pnlLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblOrigin
             // 
             this.lblOrigin.AutoSize = true;
-            this.lblOrigin.Location = new System.Drawing.Point(36, 61);
+            this.lblOrigin.Location = new System.Drawing.Point(12, 7);
             this.lblOrigin.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblOrigin.Name = "lblOrigin";
             this.lblOrigin.Size = new System.Drawing.Size(63, 22);
@@ -84,7 +86,7 @@ namespace HyperspaceSystem_Chewbacca_s_Coders
             // cmbOriginData
             // 
             this.cmbOriginData.FormattingEnabled = true;
-            this.cmbOriginData.Location = new System.Drawing.Point(107, 58);
+            this.cmbOriginData.Location = new System.Drawing.Point(83, 4);
             this.cmbOriginData.Name = "cmbOriginData";
             this.cmbOriginData.Size = new System.Drawing.Size(181, 28);
             this.cmbOriginData.TabIndex = 1;
@@ -98,7 +100,7 @@ namespace HyperspaceSystem_Chewbacca_s_Coders
             this.pnlDestination.Controls.Add(this.cmbDestinationData2);
             this.pnlDestination.Controls.Add(this.cmbDestinationData1);
             this.pnlDestination.Controls.Add(this.lblDestination);
-            this.pnlDestination.Location = new System.Drawing.Point(40, 107);
+            this.pnlDestination.Location = new System.Drawing.Point(16, 53);
             this.pnlDestination.Name = "pnlDestination";
             this.pnlDestination.Size = new System.Drawing.Size(922, 243);
             this.pnlDestination.TabIndex = 2;
@@ -171,7 +173,7 @@ namespace HyperspaceSystem_Chewbacca_s_Coders
             this.pnlData.Controls.Add(this.lblPlanetData);
             this.pnlData.Controls.Add(this.lblPlanet);
             this.pnlData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.pnlData.Location = new System.Drawing.Point(40, 371);
+            this.pnlData.Location = new System.Drawing.Point(16, 317);
             this.pnlData.Name = "pnlData";
             this.pnlData.Size = new System.Drawing.Size(922, 323);
             this.pnlData.TabIndex = 3;
@@ -333,7 +335,7 @@ namespace HyperspaceSystem_Chewbacca_s_Coders
             this.pnlOrigin.Controls.Add(this.lblOriginPlanetData);
             this.pnlOrigin.Controls.Add(this.lblOriginPlanet);
             this.pnlOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.pnlOrigin.Location = new System.Drawing.Point(40, 710);
+            this.pnlOrigin.Location = new System.Drawing.Point(16, 656);
             this.pnlOrigin.Name = "pnlOrigin";
             this.pnlOrigin.Size = new System.Drawing.Size(922, 312);
             this.pnlOrigin.TabIndex = 15;
@@ -424,16 +426,26 @@ namespace HyperspaceSystem_Chewbacca_s_Coders
             this.lblOriginPlanet.TabIndex = 0;
             this.lblOriginPlanet.Text = "Origin";
             // 
+            // pnlLeft
+            // 
+            this.pnlLeft.AutoScroll = true;
+            this.pnlLeft.Controls.Add(this.pnlDestination);
+            this.pnlLeft.Controls.Add(this.pnlOrigin);
+            this.pnlLeft.Controls.Add(this.lblOrigin);
+            this.pnlLeft.Controls.Add(this.pnlData);
+            this.pnlLeft.Controls.Add(this.cmbOriginData);
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(972, 1061);
+            this.pnlLeft.TabIndex = 16;
+            // 
             // frmHES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
-            this.Controls.Add(this.pnlOrigin);
-            this.Controls.Add(this.pnlData);
-            this.Controls.Add(this.pnlDestination);
-            this.Controls.Add(this.cmbOriginData);
-            this.Controls.Add(this.lblOrigin);
+            this.Controls.Add(this.pnlLeft);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmHES";
@@ -449,8 +461,9 @@ namespace HyperspaceSystem_Chewbacca_s_Coders
             this.pnlOrigin.ResumeLayout(false);
             this.pnlOrigin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgOriginPlanet)).EndInit();
+            this.pnlLeft.ResumeLayout(false);
+            this.pnlLeft.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -490,6 +503,7 @@ namespace HyperspaceSystem_Chewbacca_s_Coders
         private System.Windows.Forms.Label lblRouteName;
         private System.Windows.Forms.Label lblOriginPlanetData;
         private System.Windows.Forms.Label lblOriginPlanet;
+        private System.Windows.Forms.Panel pnlLeft;
     }
 }
 

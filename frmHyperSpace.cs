@@ -70,6 +70,7 @@ namespace HyperspaceSystem_Chewbacca_s_Coders
 
             pnlDestination.Visible = true;
             pnlOrigin.Visible = false;
+            pnlData.Visible = false;
 
             cmbDestinationData1.Items.Add("filiations");
             cmbDestinationData1.Items.Add("regions");
@@ -178,8 +179,15 @@ namespace HyperspaceSystem_Chewbacca_s_Coders
                 lblTypeRouteData.Text = route["type"].InnerText;
                 lblDestinationPlanetData.Text = route["end"].InnerText;
 
-                string imgOrigin = route["mapRoute"].InnerText;
-                CargarImagen(imgOrigin, imgOriginPlanet, "planetes");
+                if (route["mapRoute"] != null)
+                {
+                    string imgOrigin = route["mapRoute"].InnerText;
+                    CargarImagen(imgOrigin, imgOriginPlanet, "planetes");
+                }
+                else
+                {
+                    imgOriginPlanet.Image = null; // o la imagen por defecto que quieras mostrar
+                }
             }
         }
 
